@@ -6,10 +6,8 @@ import sliderDat from './assets/fixtures'
 const rootElement = document.getElementById('root')
 
 const App = () => (
-  <section>
     <Slider 
       sliderItem={sliderDat} />
-  </section>
 )
 
 render(<App />, rootElement)
