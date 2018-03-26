@@ -1,0 +1,19 @@
+.slider {
+  width: 480px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slider::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+.slider__item {
+  float: left;
+
+}
+.slider__item-img {
+  display: block;
+  width: 480px;
+  height: 320px;
+}
