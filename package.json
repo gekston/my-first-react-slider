@@ -2,7 +2,10 @@
   "name": "react-slider",
   "version": "1.0.0",
   "description": "react.js slider",
-  "keywords": ["react", "slider"],
+  "keywords": [
+    "react",
+    "slider"
+  ],
   "homepage": "https://codesandbox.io/s/new",
   "main": "src/index.js",
   "dependencies": {
