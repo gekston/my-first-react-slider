@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import RightArrow from '../components/RightArrow'
+import LeftArrow from '../components/LeftArrow'
 import '../style/style.css'
 
 class Slider extends Component {
@@ -11,7 +13,9 @@ class Slider extends Component {
     const sliderImg = sliderItem.map((item) => 
     <div
       className="slider__item"
-      key={item.id}>
+      key={item.id}
+      style={{display: Number(item.id) === this.state.sliderCount ? 'block' : 'none'}}
+      >
       <img
         className="slider__item-img"
         src={item.src}
@@ -20,10 +24,23 @@ class Slider extends Component {
     </div>
     )
     return(
-      <div className="slider">
-        {sliderImg}
-      </div>
+      <section>
+        <LeftArrow
+          previousSlide={this.previousSlide.bind(this)}/>
+        <div className="slider">
+          {sliderImg}
+        </div>
+        <RightArrow
+          nextSlide={this.nextSlide.bind(this)}/>
+      </section>
     )
+  }
+  nextSlide() {
+    this.setState({ sliderCount: this.state.sliderCount + 1 })
+}
+
+  previousSlide() {
+    this.setState({ sliderCount: this.state.sliderCount - 1 })
   }
 }
 
