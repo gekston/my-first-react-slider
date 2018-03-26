@@ -1,17 +1,13 @@
-import React from "react";
-import { render } from "react-dom";
-import Hello from "./Hello";
+import React from 'react'
+import { render } from 'react-dom'
+import Slider from './container/Slider'
 
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
+const rootElement = document.getElementById('root')
 
 const App = () => (
-  <div style={styles}>
-    <Hello name="CodeSandbox" />
-    <h2>Start editing to see some magic happen {"\u2728"}</h2>
-  </div>
-);
+  <section>
+    <Slider name='CodeSandbox' />
+  </section>
+)
 
-render(<App />, document.getElementById("root"));
+render(<App />, rootElement)
