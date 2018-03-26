@@ -7,7 +7,7 @@ export default [
   {
     id: '2',
     title: 'second img',
-    src: 'http://www.guoguiyan.com/data/out/97/68939726-hobbit-wallpapers.jpg'
+    src: 'https://images8.alphacoders.com/373/thumb-1920-373730.jpg'
   },
   {
     id: '3',
