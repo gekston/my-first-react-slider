@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import '../style/style.css'
 
 class Slider extends Component {
   state = {
@@ -8,11 +9,15 @@ class Slider extends Component {
   render() {
     const { sliderItem } = this.props
     const sliderImg = sliderItem.map((item) => 
+    <div
+      className="slider__item"
+      key={item.id}>
       <img
-        key={item.id}
+        className="slider__item-img"
         src={item.src}
         alt={item.title}
       />
+    </div>
     )
     return(
       <div className="slider">
